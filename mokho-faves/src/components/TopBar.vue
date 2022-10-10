@@ -1,5 +1,8 @@
 <template>
-    <div class="bg-orange-100 w-screen text-center">
-        <p class="text-xs">Top Bar Nav</p>
-    </div>
+  <div class="card-color text-center h-3rem py-1">
+    <p class="text-xs">
+      Free Shipping for orders over R 1000. Delivery within 3 to 10 days
+      nationwide.
+    </p>
+  </div>
 </template>
