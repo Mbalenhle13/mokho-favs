@@ -12,6 +12,13 @@
   border-color: $mokhoGreen;
 }
 
-.p {
-  font-family: /*Arial,*/ Helvetica;
+.contact-us-background-image {
+  background-image: url('./images/clothing-image-3.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 400px;
+  background-position: center;
+}
+
+.green-text {
+  color: #4a573e;
 }

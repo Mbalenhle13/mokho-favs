@@ -1,16 +1,22 @@
 <template>
   <div class="card mb-5 px-8">
+    <h1 class="font-light font-italic green-text text-center"> Contact</h1>
+    <p class="font-light font-italic green-text text-center pb-3">I'm a paragraph. Click here to add your own text.</p>
     <Splitter class="mb-5 h-full border-noround">
       <SplitterPanel
-        class="flex align-items-center justify-content-center button-background-color-green"
+        class="flex justify button-background-color-green contact-us-background-image relative"
+        :size="40"
+        :minSize="40"
       >
-        <Image imageClass="w-3 h-3" src="images/logo_transparent.png" />
+      <Image imageClass="absolute bottom-0 right-0 w-2 h-2" src="images/logo_transparent.png" />
       </SplitterPanel>
       <SplitterPanel
         class="align-items-center justify-content-center card-color-tan"
+        :size="60"
+        :minSize="60"
       >
-        <div class="m-6">
-          <p class="text-3xl">Write Us</p>
+        <div class="m-6 justify-content-center">
+          <p class="text-3xl font-light green-text font-italic">Write Us</p>
           <span class="p-float-label w-12 mb-5">
             <InputText
               class="w-9 border-noround input-background-color-tan"

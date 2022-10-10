@@ -1,5 +1,5 @@
 <template>
-  <div class="card surface-800 text-white">
+  <div class="card surface-900 text-white">
     <div class="card-container flex justify-content-center gap-8">
       <div class="align-items-center">
         <p class="block">Home</p>
