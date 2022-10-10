@@ -1,6 +1,6 @@
 <template>
   <div class="card mb-5 px-8">
-    <h1 class="font-light font-italic green-text text-center"> Contact</h1>
+    <h1 class="font-light font-italic green-text text-center">Contact</h1>
     <p class="font-light font-italic green-text text-center pb-3">I'm a paragraph. Click here to add your own text.</p>
     <Splitter class="mb-5 h-full border-noround">
       <SplitterPanel
