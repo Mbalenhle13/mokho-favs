@@ -25,19 +25,19 @@ export default defineComponent({
     const items = [
       {
         label: "Home",
-        to: "/",
+        to: { name: "home" },
       },
       {
         label: "About",
-        to: "/about",
+        to: { name: "about" },
       },
       {
         label: "Collection",
-        to: "/collection",
+        to: { name: "collection" },
       },
       {
         label: "Contact Us",
-        to: "/contact-us",
+        to: { name: "contactUs" },
       },
     ];
     return { items };

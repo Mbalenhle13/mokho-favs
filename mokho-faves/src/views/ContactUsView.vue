@@ -1,14 +1,19 @@
 <template>
   <div class="card mb-5 px-8">
     <h1 class="font-light font-italic green-text text-center">Contact</h1>
-    <p class="font-light font-italic green-text text-center pb-3">I'm a paragraph. Click here to add your own text.</p>
+    <p class="font-light font-italic green-text text-center pb-3">
+      I'm a paragraph. Click here to add your own text.
+    </p>
     <Splitter class="mb-5 h-full border-noround">
       <SplitterPanel
         class="flex justify button-background-color-green contact-us-background-image relative"
         :size="40"
         :minSize="40"
       >
-      <Image imageClass="absolute bottom-0 right-0 w-2 h-2" src="images/logo_transparent.png" />
+        <Image
+          imageClass="absolute bottom-0 right-0 w-2 h-2"
+          src="images/logo_transparent.png"
+        />
       </SplitterPanel>
       <SplitterPanel
         class="align-items-center justify-content-center card-color-tan"

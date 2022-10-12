@@ -36,3 +36,21 @@
   background-size: 600px 305px;
   background-position: center;
 }
+
+.home-collection-background-image {
+  background-image: url('./images/clothing-image-10.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  background-size: cover;
+}
+
+.home-shop-collection {
+  bottom: 37%;
+  color: white;
+}
+
+.home-shop-name {
+  bottom: 40%
+}
