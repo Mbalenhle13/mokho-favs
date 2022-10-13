@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="flex justify-content-between card-container blue-container w-full"
-  >
+  <div class="flex justify-content-center card-container blue-container w-full">
     <div class="flex align-items-center justify-content-center">
-      <Image imageClass=" w-4rem h-4rem" src="images/logo_transparent.png" />
+      <Image imageClass=" w-8rem h-8rem" src="images/logo_transparent.png" />
     </div>
     <div class="flex align-items-center justify-content-center">
       <MegaMenu
@@ -26,10 +24,6 @@ export default defineComponent({
       {
         label: "Home",
         to: { name: "home" },
-      },
-      {
-        label: "About",
-        to: { name: "about" },
       },
       {
         label: "Collection",
