@@ -3,10 +3,10 @@
     <div
       class="flex justify-content-center h-30rem home-collection-background-image relative"
     >
-      <p class="absolute text-white text-md home-shop-slogan">
+      <p class="absolute text-white text-8xl home-shop-name">M_Favs</p>
+      <p class="absolute text-white text-md font-italic home-shop-slogan">
         Fast fashion clothing reseller | EST. 2022
       </p>
-      <p class="absolute text-white text-8xl home-shop-name">M_Favs</p>
       <RouterLink
         :to="{ name: 'collection' }"
         class="absolute text-white home-shop-collection underline"

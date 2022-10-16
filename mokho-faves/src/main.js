@@ -4,8 +4,12 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 
 import App from "./App.vue";
+import Accordion from "primevue/accordion";
+import AccordionTab from "primevue/accordiontab";
 import Button from "primevue/button";
 import Card from "primevue/card";
+import Checkbox from "primevue/checkbox";
+import Divider from "primevue/divider";
 import InputText from "primevue/inputtext";
 import Image from "primevue/image";
 import MegaMenu from "primevue/megamenu";
@@ -31,8 +35,12 @@ app.use(createPinia());
 app.use(router);
 app.use(PrimeVue);
 
+app.component("Accordion", Accordion);
+app.component("AccordionTab", AccordionTab);
 app.component("Button", Button);
 app.component("Card", Card);
+app.component("Checkbox", Checkbox);
+app.component("Divider", Divider);
 app.component("InputText", InputText);
 app.component("Image", Image);
 app.component("MegaMenu", MegaMenu);
