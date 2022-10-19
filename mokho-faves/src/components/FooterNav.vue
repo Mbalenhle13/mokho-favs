@@ -1,5 +1,5 @@
 <template>
-  <div class="card surface-900 text-white">
+  <div class="card footer-nav-color text-white">
     <div class="card-container flex justify-content-center gap-8">
       <div class="align-items-center">
         <RouterLink
@@ -27,9 +27,9 @@
         <p class="block">FAQ</p>
       </div>
       <div class="align-items-center justify-content-center">
-        <p class="block">Facebook</p>
-        <p class="block">Instagram</p>
-        <p class="block">Yaga</p>
+        <a href="https://www.facebook.com/profile.php?id=100084520276452" class="block text-white no-underline mt-3"><i class="pi pi-facebook mr-2"></i>Facebook</a>
+        <a href="https://www.instagram.com/mokhofavs95/" class="block text-white no-underline mt-3"><i class="pi pi-instagram mr-2"></i>Instagram</a>
+        <a href="https://www.yaga.co.za/mokhofavs95" class="block text-white no-underline mt-3"><i class="pi pi-box mr-2"></i>Yaga</a>
       </div>
     </div>
   </div>

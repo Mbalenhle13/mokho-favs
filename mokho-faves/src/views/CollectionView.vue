@@ -1,64 +1,24 @@
 <template>
   <div class="grid">
-    <div class="col-2">
-      Filter By
+    <div class="col-2 mt-7">
+      <div class="font-light line-height-2 text-xl green-text">Filter By</div>
       <Divider class="center border-1 border-50"> </Divider>
-      <Accordion :multiple="true" :activeIndex="[0]" class="border-none">
-        <AccordionTab header="Collection">
-          <p>All</p>
+      <Accordion :multiple="true" :activeIndex="[0]">
+        <AccordionTab header="Sort By Price">
+          <Listbox
+            v-model="sortKey"
+            :options="sortOptions"
+            optionLabel="label"
+            @change="onSortChange($event)"
+            class="border-none p-2"
+          />
+          <!-- <p>All</p>
           <p>Dresses</p>
           <p>Sets</p>
           <p>Pants</p>
           <p>Accessories</p>
           <p>Shoes</p>
-          <p>Clearance Sale</p>
-        </AccordionTab>
-        <AccordionTab header="Size">
-          <div class="field-checkbox">
-            <Checkbox
-              inputId="sizeLarge"
-              name="sizeLarge"
-              value="Large"
-              v-model="sizes"
-            />
-            <label for="sizeLarge">L</label>
-          </div>
-          <div class="field-checkbox">
-            <Checkbox
-              inputId="sizeMedium"
-              name="sizeMedium"
-              value="Medium"
-              v-model="sizes"
-            />
-            <label for="sizeMedium">M</label>
-          </div>
-          <div class="field-checkbox">
-            <Checkbox
-              inputId="sizeSmall"
-              name="sizeSmall"
-              value="Small"
-              v-model="sizes"
-            />
-            <label for="sizeSmall">S</label>
-          </div>
-          <div class="field-checkbox">
-            <Checkbox
-              inputId="sizeXLarge"
-              name="sizeXLarge"
-              value="Extra Large"
-              v-model="sizes"
-            />
-            <label for="sizeXLarge">XL</label>
-          </div>
-          <div class="field-checkbox">
-            <Checkbox
-              inputId="sizeXSmall"
-              name="sizeXSmall"
-              value="Extra Small"
-              v-model="sizes"
-            />
-            <label for="sizeXSmall">XS</label>
-          </div>
+          <p>Clearance Sale</p> -->
         </AccordionTab>
       </Accordion>
     </div>
@@ -71,20 +31,6 @@
         :sortOrder="sortOrder"
         :sortField="sortField"
       >
-        <template #header>
-          <div class="grid grid-nogutter">
-            <div class="col-6" style="text-align: left">
-              <Dropdown
-                v-model="sortKey"
-                :options="sortOptions"
-                optionLabel="label"
-                placeholder="Sort By Price"
-                @change="onSortChange($event)"
-              />
-            </div>
-          </div>
-        </template>
-
         <template #grid="slotProps">
           <div class="col-12 md:col-4">
             <div class="product-grid-item card">
@@ -108,7 +54,7 @@
                 </div>
               </div>
               <div class="product-grid-item-bottom flex justify-content-center">
-                <span>${{ slotProps.data.price }}</span>
+                <span>R{{ slotProps.data.price }}</span>
               </div>
             </div>
           </div>
@@ -172,8 +118,57 @@ export default {
 <style lang="scss" scoped>
 .card {
   background: #ffffff;
+  color: #003300;
   padding: 2rem;
   margin-bottom: 2rem;
+}
+
+::v-deep(.p-accordion
+    .p-accordion-header:not(.p-disabled).p-highlight
+    .p-accordion-header-link),
+::v-deep(.p-accordion
+    .p-accordion-header:not(.p-highlight):not(.p-disabled):hover
+    .p-accordion-header-link),
+::v-deep(.p-accordion .p-accordion-header .p-accordion-header-link) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  background-color: white;
+  border-color: white;
+  color: #003300;
+  font-weight: lighter;
+  padding-left: 0;
+}
+
+::v-deep(.p-accordion .p-accordion-content) {
+  border-style: hidden;
+  padding: 0;
+}
+
+.product-badge {
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  border-radius: 2px;
+}
+
+.product-badge {
+  &.status-instock {
+    background: #c8e6c9;
+    color: #256029;
+  }
+
+  &.status-outofstock {
+    background: #ffcdd2;
+    color: #c63737;
+  }
+
+  &.status-lowstock {
+    background: #feedaf;
+    color: #8a5340;
+  }
 }
 
 ::v-deep(.product-grid-item) {

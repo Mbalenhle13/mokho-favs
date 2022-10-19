@@ -1,19 +1,28 @@
 <template>
   <div class="card mb-5 px-8">
     <h1 class="font-light font-italic green-text text-center">Contact</h1>
-    <p class="font-light font-italic green-text text-center pb-3">
-      I'm a paragraph. Click here to add your own text.
-    </p>
+    <div class="flex justify-content-center gap-3">
+      <div class="flex align-self-center">
+        <p class="font-bold green-text">Mail:</p>
+        <p class="font-light font-italic green-text text-center pb-3">
+          info@mokhofavs.co.za
+        </p>
+      </div>
+      <br />
+      <div class="flex align-self-center">
+        <p class="font-bold green-text">Tel:</p>
+        <p class="font-light font-italic green-text text-center pb-3">
+          072 085 2692
+        </p>
+      </div>
+    </div>
     <Splitter class="mb-5 h-full border-noround">
       <SplitterPanel
-        class="flex justify button-background-color-green contact-us-background-image relative"
+        class="flex justify footer-nav-color contact-us-background-image relative"
         :size="40"
         :minSize="40"
       >
-        <Image
-          imageClass="absolute bottom-0 right-0 w-2 h-2"
-          src="images/logo_transparent.png"
-        />
+        <div></div>
       </SplitterPanel>
       <SplitterPanel
         class="align-items-center justify-content-center card-color-tan"

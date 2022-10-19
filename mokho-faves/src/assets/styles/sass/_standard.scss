@@ -15,12 +15,16 @@
 .contact-us-background-image {
   background-image: url('./images/clothing-image-3.jpg');
   background-repeat: no-repeat;
-  background-size: 300px 400px;
+  background-size:cover;
   background-position: center;
 }
 
 .green-text {
   color: #4a573e;
+}
+
+.tan-text {
+  color: $mokhoTan
 }
 
 .about-us-background-image {
@@ -38,7 +42,7 @@
 }
 
 .home-collection-background-image {
-  background-image: url('./images/HomeImage3.png');
+  background-image: url('./images/clothing-image-4.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -58,3 +62,8 @@
 .home-shop-slogan {
   bottom: 39%
 }
+
+.footer-nav-color {
+  background-color: #2F2E2E;
+}
+
