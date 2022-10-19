@@ -27,9 +27,21 @@
         <p class="block">FAQ</p>
       </div>
       <div class="align-items-center justify-content-center">
-        <a href="https://www.facebook.com/profile.php?id=100084520276452" class="block text-white no-underline mt-3"><i class="pi pi-facebook mr-2"></i>Facebook</a>
-        <a href="https://www.instagram.com/mokhofavs95/" class="block text-white no-underline mt-3"><i class="pi pi-instagram mr-2"></i>Instagram</a>
-        <a href="https://www.yaga.co.za/mokhofavs95" class="block text-white no-underline mt-3"><i class="pi pi-box mr-2"></i>Yaga</a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100084520276452"
+          class="block text-white no-underline mt-3"
+          ><i class="pi pi-facebook mr-2"></i>Facebook</a
+        >
+        <a
+          href="https://www.instagram.com/mokhofavs95/"
+          class="block text-white no-underline mt-3"
+          ><i class="pi pi-instagram mr-2"></i>Instagram</a
+        >
+        <a
+          href="https://www.yaga.co.za/mokhofavs95"
+          class="block text-white no-underline mt-3"
+          ><i class="pi pi-box mr-2"></i>Yaga</a
+        >
       </div>
     </div>
   </div>
