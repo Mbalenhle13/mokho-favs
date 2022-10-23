@@ -12,13 +12,15 @@
             @change="onSortChange($event)"
             class="border-none p-2"
           />
-          <!-- <p>All</p>
-          <p>Dresses</p>
-          <p>Sets</p>
-          <p>Pants</p>
-          <p>Accessories</p>
-          <p>Shoes</p>
-          <p>Clearance Sale</p> -->
+        </AccordionTab>
+        <AccordionTab header="Category">
+          <Listbox
+            v-model="filter['global']"
+            :options="sortOptions"
+            optionLabel="label"
+            @change="onSortChange($event)"
+            class="border-none p-2"
+          />
         </AccordionTab>
       </Accordion>
     </div>
@@ -30,6 +32,7 @@
         :rows="9"
         :sortOrder="sortOrder"
         :sortField="sortField"
+        v-model:filters="filter"
       >
         <template #grid="slotProps">
           <div class="col-12 md:col-4">
@@ -67,6 +70,7 @@
 <script>
 import { ref, onMounted } from "vue";
 import ProductService from "../service/ProductService";
+import {FilterMatchMode, FilterOperator} from 'primevue/api';
 
 export default {
   setup() {
@@ -76,6 +80,18 @@ export default {
         .then((data) => (products.value = data));
     });
 
+    const filter = ref({
+            'status': {operator: FilterOperator.OR, constraints: [{value: null, matchMode: FilterMatchMode.EQUALS}]},
+        });
+
+        const clearFilter = () => {
+            initFilter();
+        };
+        const initFilter = () => {
+            filter.value = {
+                'status': {operator: FilterOperator.OR, constraints: [{value: null, matchMode: FilterMatchMode.EQUALS}]},
+            }
+          }
     const sizes = ref([]);
     const products = ref();
     const productService = ref(new ProductService());
@@ -102,6 +118,9 @@ export default {
       }
     };
     return {
+      filter,
+      clearFilter,
+      initFilter,
       sizes,
       products,
       layout,
