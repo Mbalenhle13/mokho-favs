@@ -13,7 +13,7 @@
 }
 
 .contact-us-background-image {
-  background-image: url('./images/clothing-image-3.jpg');
+  background-image: url('images/clothing-image-3.jpg');
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -27,22 +27,8 @@
   color: $mokhoTan
 }
 
-.about-us-background-image {
-  background-image: url('./images/clothing-image-4.jpg');
-  background-repeat: no-repeat;
-  background-size: 600px 305px;
-  background-position: center;
-}
-
-.about-us-background-image2 {
-  background-image: url('./images/clothing-image-11.jpg');
-  background-repeat: no-repeat;
-  background-size: 600px 305px;
-  background-position: center;
-}
-
 .home-collection-background-image {
-  background-image: url('./images/clothing-image-4.jpg');
+  background-image: url('images/clothing-image-4.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
