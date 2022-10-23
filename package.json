@@ -1,7 +1,5 @@
 {
   "name": "mokho-faves",
-  "version": "5.0.0",
-  "engines": "16.x",
   "scripts": {
     "start": "vite",
     "build": "vite build",
