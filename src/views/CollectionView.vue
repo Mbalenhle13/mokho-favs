@@ -70,7 +70,6 @@
 <script>
 import { ref, onMounted } from "vue";
 import ProductService from "../service/ProductService";
-import {FilterMatchMode, FilterOperator} from 'primevue/api';
 
 export default {
   setup() {
@@ -80,18 +79,6 @@ export default {
         .then((data) => (products.value = data));
     });
 
-    const filter = ref({
-            'status': {operator: FilterOperator.OR, constraints: [{value: null, matchMode: FilterMatchMode.EQUALS}]},
-        });
-
-        const clearFilter = () => {
-            initFilter();
-        };
-        const initFilter = () => {
-            filter.value = {
-                'status': {operator: FilterOperator.OR, constraints: [{value: null, matchMode: FilterMatchMode.EQUALS}]},
-            }
-          }
     const sizes = ref([]);
     const products = ref();
     const productService = ref(new ProductService());
