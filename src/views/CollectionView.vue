@@ -13,20 +13,11 @@
             class="border-none p-2"
           />
         </AccordionTab>
-        <AccordionTab header="Category">
-          <Listbox
-            v-model="filter['global']"
-            :options="sortOptions"
-            optionLabel="label"
-            @change="onSortChange($event)"
-            class="border-none p-2"
-          />
-        </AccordionTab>
       </Accordion>
     </div>
     <div class="col">
       <DataView
-        :value="products"
+        :value="collectionStock"
         :layout="layout"
         :paginator="true"
         :rows="9"
@@ -57,7 +48,7 @@
                 </div>
               </div>
               <div class="product-grid-item-bottom flex justify-content-center">
-                <span>R{{ slotProps.data.price }}</span>
+                <span>{{ formatCurrency(slotProps.data.price) }} </span>
               </div>
             </div>
           </div>
@@ -69,19 +60,12 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import ProductService from "../service/ProductService";
+import { fetchCollectionData } from "../firebase/stock";
 
 export default {
   setup() {
-    onMounted(() => {
-      productService.value
-        .getProducts()
-        .then((data) => (products.value = data));
-    });
-
+    const collectionStock = ref();
     const sizes = ref([]);
-    const products = ref();
-    const productService = ref(new ProductService());
     const layout = ref("grid");
     const sortKey = ref();
     const sortOrder = ref();
@@ -90,6 +74,18 @@ export default {
       { label: "Price High to Low", value: "!price" },
       { label: "Price Low to High", value: "price" },
     ]);
+
+    onMounted(async () => {
+      collectionStock.value = await fetchCollectionData();
+    });
+
+    const formatCurrency = (value) => {
+            return value.toLocaleString("en-ZA", {
+                style: "currency",
+                currency: "ZAR",
+            });
+        };
+
     const onSortChange = (event) => {
       const value = event.value.value;
       const sortValue = event.value;
@@ -105,12 +101,10 @@ export default {
       }
     };
     return {
-      filter,
-      clearFilter,
-      initFilter,
+      collectionStock,
       sizes,
-      products,
       layout,
+      formatCurrency,
       sortKey,
       sortOrder,
       sortField,

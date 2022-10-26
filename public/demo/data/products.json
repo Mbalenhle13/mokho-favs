@@ -1,23 +1,5 @@
 {
     "data": [
-        {"id": "1002","code": "zz21cz3c1","name": "Bag","description": "Product Description","image": "../../../images/collection/Bags1.png","price": 240,"category": "Accessories","quantity": 2,"inventoryStatus": "LOWSTOCK"},
-        {"id": "1003","code": "244wgerg2","name": "Bag","description": "Product Description","image": "../../../images/collection/Bags2.png","price": 240,"category": "Accessories","quantity": 25,"inventoryStatus": "INSTOCK"},
-        {"id": "1004","code": "h456wer53","name": "Bag","description": "Product Description","image": "../../../images/collection/bags3.png","price": 240,"category": "Accessories","quantity": 73,"inventoryStatus": "INSTOCK"},
-        {"id": "1005","code": "av2231fwg","name": "Bag","description": "Product Description","image": "../../../images/collection/bags4.png","price": 240,"category": "Accessories","quantity": 0,"inventoryStatus": "INSTOCK"},
-        {"id": "1006","code": "bib36pfvm","name": "Bag","description": "Product Description","image": "../../../images/collection/bags5.png","price": 300,"category": "Accessories","quantity": 5,"inventoryStatus": "LOWSTOCK"},
-        {"id": "1007","code": "mbvjkgip5","name": "Bag","description": "Product Description","image": "../../../images/collection/bags6.png","price": 220,"category": "Accessories","quantity": 23,"inventoryStatus": "INSTOCK"},
-        {"id": "1008","code": "vbb124btr","name": "Bag","description": "Product Description","image": "../../../images/collection/bags7.png","price": 240,"category": "Accessories","quantity": 2,"inventoryStatus": "LOWSTOCK"},
-        {"id": "1009","code": "cm230f032","name": "Bag","description": "Product Description","image": "../../../images/collection/bags8.png","price": 220,"category": "Accessories","quantity": 63,"inventoryStatus": "INSTOCK"},
-        {"id": "1010","code": "plb34234v","name": "Bag","description": "Product Description","image": "../../../images/collection/bags9.png","price": 350,"category": "Accessories","quantity": 0,"inventoryStatus": "INSTOCK"},
-        {"id": "1011","code": "4920nnc2d","name": "Bag","description": "Product Description","image": "../../../images/collection/bags10.png","price": 370,"category": "Accessories","quantity": 23,"inventoryStatus": "INSTOCK"},
-        {"id": "1012","code": "250vm23cc","name": "Bag","description": "Product Description","image": "../../../images/collection/bags11.png","price": 300,"category": "Accessories","quantity": 74,"inventoryStatus": "INSTOCK"},
-        {"id": "1000","code": "f230fh0g3","name": "Bag","description": "Product Description","image": "../../../images/collection/bag1Sold.png","price": 240,"category": "Accessories","quantity": 24,"inventoryStatus": "OUTOFSTOCK"},
-        {"id": "1001","code": "nvklal433","name": "Dress","description": "Product Description","image": "../../../images/collection/dress1Sold.png","price": 300,"category": "Clothing","quantity": 61,"inventoryStatus": "OUTOFSTOCK"},
-        {"id": "1000","code": "f230fh0g3","name": "Jersey","description": "Product Description","image": "../../../images/collection/jersey1.png","price": 120,"category": "Clothing","quantity": 24,"inventoryStatus": "INSTOCK"},
-        {"id": "1001","code": "nvklal433","name": "Jersey","description": "Product Description","image": "../../../images/collection/jersey2.png","price": 120,"category": "Clothing","quantity": 61,"inventoryStatus": "INSTOCK"},
-        {"id": "1000","code": "f230fh0g3","name": "Jersey","description": "Product Description","image": "../../../images/collection/jersey3.png","price": 200,"category": "Clothing","quantity": 24,"inventoryStatus": "INSTOCK"},
-        {"id": "1001","code": "nvklal433","name": "Skirt","description": "Product Description","image": "../../../images/collection/skirt1.png","price": 150,"category": "Clothing","quantity": 61,"inventoryStatus": "INSTOCK"},
-        {"id": "1001","code": "nvklal433","name": "Top","description": "Product Description","image": "../../../images/collection/top1.png","price": 150,"category": "Clothing","quantity": 61,"inventoryStatus": "INSTOCK"},
-        {"id": "1001","code": "nvklal433","name": "Top","description": "Product Description","image": "../../../images/collection/top2.png","price": 200,"category": "Clothing","quantity": 61,"inventoryStatus": "INSTOCK"}
+        {"id": "1001","name": "Bag", "image": "https://firebasestorage.googleapis.com/v0/b/mokho-favs.appspot.com/o/collection%2FBags1.png?alt=media&token=c93a1399-be4e-42c4-9ce2-fd69d9c91d6a","price": 240,"category": "Accessories",  "inventoryStatus": "LOWSTOCK"}
     ]
 }
