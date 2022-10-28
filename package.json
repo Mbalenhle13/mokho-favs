@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "firebase": "^9.12.1",
     "firebase-auto-ids": "^1.1.0",
     "loader": "^2.1.1",

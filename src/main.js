@@ -20,7 +20,10 @@ import Panel from "primevue/panel";
 import Rating from "primevue/rating";
 import Splitter from "primevue/splitter";
 import SplitterPanel from "primevue/splitterpanel";
+import StyleClass from 'primevue/styleclass';
 import Textarea from "primevue/textarea";
+import ToastService from "primevue/toastservice";
+import Toast from "primevue/toast";
 import PrimeVue from "primevue/config";
 
 import "primevue/resources/themes/lara-light-indigo/theme.css";
@@ -35,9 +38,12 @@ import "./assets/styles/layout.scss";
 
 const app = createApp(App);
 
+app.directive('styleclass', StyleClass);
+
 app.use(createPinia());
 app.use(router);
 app.use(PrimeVue);
+app.use(ToastService);
 
 app.component("Accordion", Accordion);
 app.component("AccordionTab", AccordionTab);
@@ -56,5 +62,6 @@ app.component("Rating", Rating);
 app.component("Splitter", Splitter);
 app.component("SplitterPanel", SplitterPanel);
 app.component("Textarea", Textarea);
+app.component("Toast", Toast);
 
 app.mount("#app");

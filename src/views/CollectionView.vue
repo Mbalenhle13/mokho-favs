@@ -80,11 +80,11 @@ export default {
     });
 
     const formatCurrency = (value) => {
-            return value.toLocaleString("en-ZA", {
-                style: "currency",
-                currency: "ZAR",
-            });
-        };
+      return value.toLocaleString("en-ZA", {
+        style: "currency",
+        currency: "ZAR",
+      });
+    };
 
     const onSortChange = (event) => {
       const value = event.value.value;
