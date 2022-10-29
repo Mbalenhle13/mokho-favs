@@ -20,13 +20,12 @@ import Panel from "primevue/panel";
 import Rating from "primevue/rating";
 import Splitter from "primevue/splitter";
 import SplitterPanel from "primevue/splitterpanel";
-import StyleClass from 'primevue/styleclass';
 import Textarea from "primevue/textarea";
 import ToastService from "primevue/toastservice";
 import Toast from "primevue/toast";
 import PrimeVue from "primevue/config";
 
-import "primevue/resources/themes/lara-light-indigo/theme.css";
+import "primevue/resources/themes/fluent-light/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
@@ -37,8 +36,6 @@ import router from "./router";
 import "./assets/styles/layout.scss";
 
 const app = createApp(App);
-
-app.directive('styleclass', StyleClass);
 
 app.use(createPinia());
 app.use(router);

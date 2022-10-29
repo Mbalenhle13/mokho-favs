@@ -134,3 +134,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+::v-deep(.p-button:enabled:hover) {
+  background-color: #002400;
+  border-color: #ffff;
+}
+
+::v-deep(.p-inputtext:enabled:focus){
+  box-shadow: inset 0 0 0 1px #003300;
+  outline: 0 none;
+  outline-offset: 0;
+  border-color: #003300;
+}
+</style>
