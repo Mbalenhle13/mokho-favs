@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <div class="col-2 mt-7">
+    <div class="lg:col-2 mt-7">
       <div class="font-light line-height-2 text-xl green-text">Filter By</div>
       <Divider class="center border-1 border-50"> </Divider>
       <Accordion :multiple="true" :activeIndex="[0]">
@@ -16,6 +16,7 @@
       </Accordion>
     </div>
     <div class="col">
+      <!-- <Skeleton height="30rem" /> -->
       <DataView
         :value="collectionStock"
         :layout="layout"

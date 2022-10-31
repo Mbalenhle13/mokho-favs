@@ -1,17 +1,10 @@
 <template>
-  <div class="flex justify-content-center card-container blue-container w-full">
-    <div class="flex align-items-center justify-content-center">
-      <Image imageClass=" w-8rem h-8rem" src="images/tan-logo.png" />
-    </div>
-    <div class="flex align-items-center justify-content-center">
-      <MegaMenu
-        :model="items"
-        class="pb-0 bg-white border-noround border-none flex align-items-center justify-content-center"
-      />
-    </div>
-    <div
-      class="w-4rem h-4rem flex align-items-center justify-content-center"
-    ></div>
+  <div class="col-12 flex justify-content-center w-full">
+    <Menubar :model="items" class="border-none">
+      <template #start>
+        <Image imageClass=" w-8rem h-8rem" src="images/tan-logo.png" />
+      </template>
+    </Menubar>
   </div>
 </template>
 
@@ -38,3 +31,14 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+::v-deep(.p-menubar .p-menubar-button) {
+  color: #003300;
+  background: #ffff;
+}
+::v-deep(.p-menubar .p-menubar-button:hover) {
+  color: #003300;
+  background: #ffff;
+}
+</style>

@@ -21,11 +21,11 @@
           <p>Contact Us</p>
         </RouterLink>
       </div>
-      <div class="align-items-center justify-content-center">
+      <!-- TODO: To do add here <div class="align-items-center justify-content-center">
         <p class="block">Terms & Conditions</p>
         <p class="block">Refunds Policy</p>
         <p class="block">FAQ</p>
-      </div>
+      </div> -->
       <div class="align-items-center justify-content-center">
         <a
           href="https://www.facebook.com/profile.php?id=100084520276452"
