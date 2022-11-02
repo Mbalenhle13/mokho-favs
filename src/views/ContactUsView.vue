@@ -1,5 +1,5 @@
 <template>
-   <div class="col-12 md:col-6 lg:col-12 xs:px-2 md:px-2 lg:px-8">
+  <div class="col-12 md:col-6 lg:col-12 xs:px-2 md:px-2 lg:px-8">
     <h1 class="font-light font-italic green-text text-center">Contact</h1>
     <div class="flex justify-content-center gap-3">
       <div class="flex align-self-center">

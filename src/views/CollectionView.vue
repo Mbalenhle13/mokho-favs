@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <div class="lg:col-2 mt-7">
+    <!-- TODO: Add Size and Category Filters <div class="lg:col-2 mt-7">
       <div class="font-light line-height-2 text-xl green-text">Filter By</div>
       <Divider class="center border-1 border-50"> </Divider>
       <Accordion :multiple="true" :activeIndex="[0]">
@@ -14,7 +14,7 @@
           />
         </AccordionTab>
       </Accordion>
-    </div>
+    </div> -->
     <div class="col">
       <!-- <Skeleton height="30rem" /> -->
       <DataView
@@ -26,6 +26,13 @@
         :sortField="sortField"
         v-model:filters="filter"
       >
+      <template #header>
+                <div class="flex justify-content-end pr-5 border-none">
+                    <div style="text-align: right">
+                        <Dropdown class="border-none" v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price" @change="onSortChange($event)"/>
+                    </div>
+                </div>
+			</template>
         <template #grid="slotProps">
           <div class="col-12 md:col-4">
             <div class="product-grid-item card">
@@ -124,27 +131,37 @@ export default {
   margin-bottom: 2rem;
 }
 
-::v-deep(.p-accordion
-    .p-accordion-header:not(.p-disabled).p-highlight
-    .p-accordion-header-link),
-::v-deep(.p-accordion
-    .p-accordion-header:not(.p-highlight):not(.p-disabled):hover
-    .p-accordion-header-link),
-::v-deep(.p-accordion .p-accordion-header .p-accordion-header-link) {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  background-color: white;
-  border-color: white;
-  color: #003300;
-  font-weight: lighter;
-  padding-left: 0;
+::v-deep(.p-dataview .p-dataview-header){
+  border-style:hidden;
 }
 
-::v-deep(.p-accordion .p-accordion-content) {
-  border-style: hidden;
-  padding: 0;
+::v-deep(.p-dropdown:not(.p-disabled).p-focus) {
+  box-shadow: inset 0 0 0 2px #605e5c;
+  border-color: #605e5c;
+
 }
+
+// ::v-deep(.p-accordion
+//     .p-accordion-header:not(.p-disabled).p-highlight
+//     .p-accordion-header-link),
+// ::v-deep(.p-accordion
+//     .p-accordion-header:not(.p-highlight):not(.p-disabled):hover
+//     .p-accordion-header-link),
+// ::v-deep(.p-accordion .p-accordion-header .p-accordion-header-link) {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   justify-content: space-around;
+//   background-color: white;
+//   border-color: white;
+//   color: #003300;
+//   font-weight: lighter;
+//   padding-left: 0;
+// }
+
+// ::v-deep(.p-accordion .p-accordion-content) {
+//   border-style: hidden;
+//   padding: 0;
+// }
 
 .product-badge {
   padding: 0.25em 0.5rem;
