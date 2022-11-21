@@ -1,69 +1,68 @@
 <template>
-  <div class="grid">
-    <!-- TODO: Add Size and Category Filters <div class="lg:col-2 mt-7">
-      <div class="font-light line-height-2 text-xl green-text">Filter By</div>
-      <Divider class="center border-1 border-50"> </Divider>
-      <Accordion :multiple="true" :activeIndex="[0]">
-        <AccordionTab header="Sort By Price">
-          <Listbox
+  <!-- <Skeleton height="30rem" /> -->
+  <DataView
+    :value="collectionStock"
+    :layout="layout"
+    :paginator="true"
+    :rows="9"
+    :sortOrder="sortOrder"
+    :sortField="sortField"
+    v-model:filters="filter"
+  >
+    <template #header>
+      <div class="flex justify-content-end pr-5">
+        <div style="text-align: right">
+          <Dropdown
+            class="border-none"
             v-model="sortKey"
             :options="sortOptions"
             optionLabel="label"
+            placeholder="Sort By Price"
             @change="onSortChange($event)"
-            class="border-none p-2"
           />
-        </AccordionTab>
-      </Accordion>
-    </div> -->
-    <div class="col">
-      <!-- <Skeleton height="30rem" /> -->
-      <DataView
-        :value="collectionStock"
-        :layout="layout"
-        :paginator="true"
-        :rows="9"
-        :sortOrder="sortOrder"
-        :sortField="sortField"
-        v-model:filters="filter"
-      >
-      <template #header>
-                <div class="flex justify-content-end pr-5 border-none">
-                    <div style="text-align: right">
-                        <Dropdown class="border-none" v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price" @change="onSortChange($event)"/>
-                    </div>
-                </div>
-			</template>
-        <template #grid="slotProps">
-          <div class="col-12 md:col-4">
-            <div class="product-grid-item card">
-              <div class="flex justify-content-end">
-                <span
-                  :class="
-                    'product-badge status-' +
-                    slotProps.data.inventoryStatus.toLowerCase()
-                  "
-                  >{{ slotProps.data.inventoryStatus }}</span
-                >
-              </div>
-              <div class="text-center">
-                <img
-                  :src="slotProps.data.image"
-                  :alt="slotProps.data.name"
-                  class="h-12 w-12"
-                />
-                <div class="mb-1">
-                  {{ slotProps.data.name }}
-                </div>
-              </div>
-              <div class="product-grid-item-bottom flex justify-content-center">
-                <span>{{ formatCurrency(slotProps.data.price) }} </span>
-              </div>
+        </div>
+      </div>
+    </template>
+    <template #grid="slotProps">
+      <div class="md:col-3 sm:col-2">
+        <div class="product-grid-item card">
+        <div class="flex justify-content-end">
+          <span class="pr-1">
+              <i class="pi pi-circle-fill" style="color:bisque "></i>
+          </span>
+          <span class="pr-1">
+              <i class="pi pi-circle-fill" style="color:black "></i>
+          </span>
+          <span class="pr-1">
+              <i class="pi pi-circle-fill" style="color:brown "></i>
+          </span>
+        </div>
+          <!-- <div class="flex justify-content-end">
+            <span
+              :class="
+                'product-badge status-' +
+                slotProps.data.inventoryStatus.toLowerCase()
+              "
+              >{{ slotProps.data.inventoryStatus }}</span
+            >
+          </div> -->
+          <div class="text-center">
+            <img
+              :src="slotProps.data.image2"
+              :alt="slotProps.data.name"
+              class="h-6 w-6"
+            />
+            <div class="mb-1">
+              {{ slotProps.data.name }}
             </div>
           </div>
-        </template>
-      </DataView>
-    </div>
-  </div>
+          <div class="product-grid-item-bottom flex justify-content-center">
+            <span>{{ formatCurrency(slotProps.data.price) }} </span>
+          </div>
+        </div>
+      </div>
+    </template>
+  </DataView>
 </template>
 
 <script>
@@ -131,38 +130,14 @@ export default {
   margin-bottom: 2rem;
 }
 
-::v-deep(.p-dataview .p-dataview-header){
-  border-style:hidden;
+::v-deep(.p-dataview .p-dataview-header) {
+  border-style: hidden;
 }
 
 ::v-deep(.p-dropdown:not(.p-disabled).p-focus) {
   box-shadow: inset 0 0 0 2px #605e5c;
   border-color: #605e5c;
-
 }
-
-// ::v-deep(.p-accordion
-//     .p-accordion-header:not(.p-disabled).p-highlight
-//     .p-accordion-header-link),
-// ::v-deep(.p-accordion
-//     .p-accordion-header:not(.p-highlight):not(.p-disabled):hover
-//     .p-accordion-header-link),
-// ::v-deep(.p-accordion .p-accordion-header .p-accordion-header-link) {
-//   display: flex;
-//   flex-direction: row-reverse;
-//   justify-content: space-around;
-//   background-color: white;
-//   border-color: white;
-//   color: #003300;
-//   font-weight: lighter;
-//   padding-left: 0;
-// }
-
-// ::v-deep(.p-accordion .p-accordion-content) {
-//   border-style: hidden;
-//   padding: 0;
-// }
-
 .product-badge {
   padding: 0.25em 0.5rem;
   text-transform: uppercase;
@@ -189,13 +164,12 @@ export default {
   }
 }
 
-::v-deep(.product-grid-item) {
-  margin: 0.5rem;
-  // border: 1px solid var(--surface-border);
+// ::v-deep(.product-grid-item) {
+//   margin: 0.5rem;
 
-  img {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin: 1rem 0;
-  }
-}
+//   img {
+//     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+//     margin: 1rem 0;
+//   }
+// }
 </style>

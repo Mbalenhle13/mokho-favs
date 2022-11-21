@@ -82,7 +82,12 @@
             <Button
               class="submit button-background-color-green border-noround"
               type="submit"
-              >Submit</Button
+              >Send Mail</Button
+            >
+            <Button
+              class="submit button-background-color-green border-noround"
+              type="submit"
+              >Clear</Button
             >
           </form>
         </div>

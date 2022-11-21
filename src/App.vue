@@ -1,5 +1,5 @@
 <script setup>
-import TopBar from "./components/TopBar.vue";
+// import TopBar from "./components/TopBar.vue";
 import NavBar from "./components/NavBar.vue";
 import FooterNav from "./components/FooterNav.vue";
 </script>
@@ -8,7 +8,7 @@ import FooterNav from "./components/FooterNav.vue";
   <div>
     <header>
       <div class="flex-column w-12">
-        <TopBar />
+        <!-- <TopBar /> -->
         <NavBar />
       </div>
     </header>
