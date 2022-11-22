@@ -15,7 +15,23 @@ export const fetchCollectionData = async () => {
   const stockCollection = await getDocs(stockRef);
   let stockArray = [];
   stockCollection.forEach((doc) => stockArray.push(doc.data()));
-  return stockArray;
+ const sortedStockArray =  stockArray.sort((a, b) => {
+    let statusA = a.inventoryStatus.toLowerCase(),
+      statusB = b.inventoryStatus.toLowerCase();
+
+  if(statusA < statusB)
+  {
+    return -1;
+  }
+
+  if(statusA > statusB)
+  {
+    return 1
+  }
+    return 0;
+  })
+
+  return sortedStockArray;
 };
 
 // export const fetchCollectionData = async () => {

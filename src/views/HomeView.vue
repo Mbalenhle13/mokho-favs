@@ -7,12 +7,12 @@
       <p class="absolute text-white text-md font-italic home-shop-slogan">
         Fast fashion clothing reseller | EST. 2022
       </p>
-      <RouterLink
-        :to="{ name: 'collection' }"
+      <a
+        href="https://www.yaga.co.za/mokhofavs95"
         class="absolute text-white home-shop-collection underline"
       >
-        <p class="">See our collection</p>
-      </RouterLink>
+        <p class="">Shop our YAGA store</p>
+      </a>
     </div>
     <div class="card">
       <h1 class="font-light font-italic green-text text-center">Our story</h1>

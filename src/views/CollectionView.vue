@@ -26,13 +26,20 @@
         :sortField="sortField"
         v-model:filters="filter"
       >
-      <template #header>
-                <div class="flex justify-content-end pr-5 border-none">
-                    <div style="text-align: right">
-                        <Dropdown class="border-none" v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price" @change="onSortChange($event)"/>
-                    </div>
-                </div>
-			</template>
+        <template #header>
+          <div class="flex justify-content-end pr-5 border-none">
+            <div style="text-align: right">
+              <Dropdown
+                class="border-none"
+                v-model="sortKey"
+                :options="sortOptions"
+                optionLabel="label"
+                placeholder="Sort By Price"
+                @change="onSortChange($event)"
+              />
+            </div>
+          </div>
+        </template>
         <template #grid="slotProps">
           <div class="col-12 md:col-4">
             <div class="product-grid-item card">
@@ -85,7 +92,20 @@ export default {
 
     onMounted(async () => {
       collectionStock.value = await fetchCollectionData();
+      // sortedArray(collectionStock.value);
     });
+
+    // function sortedArray () {
+    //   function compare(a, b) {
+    //     if (a.inventoryStatus < b.inventoryStatus)
+    //       return -1;
+    //     if (a.inventoryStatus> b.inventoryStatus)
+    //       return 1;
+    //     return 0;
+    //   }
+
+    //   return this.arrays.sort(compare);
+    // }
 
     const formatCurrency = (value) => {
       return value.toLocaleString("en-ZA", {
@@ -131,14 +151,13 @@ export default {
   margin-bottom: 2rem;
 }
 
-::v-deep(.p-dataview .p-dataview-header){
-  border-style:hidden;
+::v-deep(.p-dataview .p-dataview-header) {
+  border-style: hidden;
 }
 
 ::v-deep(.p-dropdown:not(.p-disabled).p-focus) {
   box-shadow: inset 0 0 0 2px #605e5c;
   border-color: #605e5c;
-
 }
 
 // ::v-deep(.p-accordion
@@ -173,6 +192,7 @@ export default {
 }
 
 .product-badge {
+  //Maybe change these to Awaiting payment, Purchased, Available ?
   &.status-instock {
     background: #c8e6c9;
     color: #256029;
